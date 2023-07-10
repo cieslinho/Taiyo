@@ -1,0 +1,1 @@
+const navBtn=document.querySelector(".nav__btn"),navMenu=document.querySelector(".nav__menu"),navOverlay=document.querySelector(".nav__overlay"),handleNav=()=>{navBtn.classList.toggle("active"),navMenu.classList.toggle("active"),navOverlay.classList.toggle("active")};navBtn.addEventListener("click",handleNav);

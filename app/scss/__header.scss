@@ -1,0 +1,19 @@
+.header {
+	position: relative;
+	width: 100%;
+	height: 75vh;
+}
+
+.slider {
+	width: 100%;
+	height: 100%;
+
+	&__slides {
+	}
+
+	&__slide {
+		width: 100%;
+		height: 100%;
+		object-fit: cover !important;
+	}
+}
