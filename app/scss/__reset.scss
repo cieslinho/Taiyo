@@ -14,6 +14,11 @@
 	text-decoration: none;
 }
 
+::selection {
+	background-color: $orange-red;
+	color: $black;
+}
+
 html {
 	scroll-behavior: smooth;
 	font-size: 62.5%;
@@ -22,5 +27,5 @@ html {
 body {
 	background-color: $black;
 	font-size: 1.6rem;
-	font-family: 'Roboto Serif', serif;
+	font-family: 'Roboto Slab', serif;
 }

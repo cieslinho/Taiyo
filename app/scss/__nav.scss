@@ -1,3 +1,11 @@
+.main {
+	transition: filter 0.3s ease-in-out;
+}
+
+.main.active {
+	filter: blur(5px);
+}
+
 .nav {
 	position: fixed;
 	top: 0;
@@ -17,10 +25,10 @@
 	}
 
 	&__overlay {
-		display: block;
 		position: fixed;
 		top: 0;
 		right: 0;
+		visibility: hidden;
 		// transform: translateX(100%);
 		opacity: 0;
 		transition: transform 0.3s ease-in-out, opacity 0.3s, background-color 0.3s;
@@ -35,8 +43,14 @@
 
 	&__overlay.active {
 		// transform: translateX(0);
+		display: block;
+		visibility: visible;
 		opacity: 1;
 		background-color: rgba($color: #000000, $alpha: 0.6);
+
+		@include respond(tablet) {
+			display: none;
+		}
 	}
 
 	&__navbar {
@@ -114,8 +128,6 @@
 	}
 
 	&__btn.active {
-		background-color: $black;
-
 		.nav__btn-bars {
 			background-color: $orange;
 			width: 100%;
@@ -139,11 +151,10 @@
 		justify-content: center;
 		align-items: center;
 		transform: translateX(100%);
-		backdrop-filter: 0;
 		transition: backdrop-filter 0.3s ease-in-out, transform 0.5s ease-in-out;
 		border-left: 2px solid $orange-red;
-		background-color: rgba($color: $orange, $alpha: 0.05);
-		width: 70vw;
+		background-color: rgba($color: $black, $alpha: 0.9);
+		width: 80vw;
 		height: 100vh;
 
 		@include respond(tablet) {
@@ -198,6 +209,6 @@
 	&__menu.active {
 		// display: flex;
 		transform: translateX(0);
-		backdrop-filter: blur(5px);
+		backdrop-filter: blur(2px);
 	}
 }

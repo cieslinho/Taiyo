@@ -31,3 +31,19 @@
 		}
 	}
 }
+
+@mixin section-padding {
+	padding: 2em 1em;
+
+	@include respond(tablet) {
+		padding: 3em 1em;
+	}
+}
+
+@mixin section-padding-block {
+	padding-block: 1em;
+
+	@include respond(tablet) {
+		padding-block: 3em;
+	}
+}

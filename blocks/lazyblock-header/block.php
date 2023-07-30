@@ -1,19 +1,28 @@
 <header class="header">
-<div class="swiffy-slider slider slider-item-nogap slider-item-nosnap slider-nav-sm slider-nav-autoplay slider-indicators-square slider-indicators-highlight slider-nav-animation slider-nav-animation-fadein slider-nav-animation-slow">
-    <ul class="slider-container slider__slides">
-<img id="slide1" src="<?php echo get_template_directory_uri(); ?>/assets/images/Salon5.jpg" alt="TAIYO SALON IMG" class="slider__slide">
-<img id="slide2" src="<?php echo get_template_directory_uri(); ?>/assets/images/Salon5.jpg" alt="TAIYO SALON IMG" class="slider__slide">
-<img id="slide3" src="<?php echo get_template_directory_uri(); ?>/assets/images/Salon5.jpg" alt="TAIYO SALON IMG" class="slider__slide">
-    </ul>
 
-    <button type="button" class="slider-nav slider__nav"></button>
-    <button type="button" class="slider-nav slider__nav slider-nav-next"></button>
 
-    <ul class="slider-indicators">
-        <li class="active"></li>
-        <li class=""></li>
-        <li class=""></li>
+    <div class="swiper mySwiper header__swiper">
+   
+           <div class="header__texts">
+                 <h2 class="header__title">Salon Masażu Erotycznego</h2>
+                 <h2 class="header__title header__subtitle">Wrocław</h2>
+                 <a href="#pricing" class="header__link">Oferta</a>
+                </div>
       
-    </ul>
-</div>
+        <div class="swiper-wrapper header__boxes ">
+   
+            <?php forEach( $attributes['slide'] as $slide) : ?>
+            <img src="<?php echo esc_url( $slide['image']['url'] ); ?>"
+                alt="<?php echo esc_attr( $slide['image']['alt'] ); ?>" class="header__slide header__slide-desktop swiper-slide">
+            <img src="<?php echo esc_url( $slide['image-mobile']['url'] ); ?>"
+                alt="<?php echo esc_attr( $slide['image-mobile']['alt'] ); ?>" class="header__slide header__slide-mobile swiper-slide">
+            <?php endforeach; ?>
+        </div>
+        <!-- <div class="swiper-button-next header__btn"></div>
+        <div class="swiper-button-prev header__btn"></div> -->
+        <div class="swiper-pagination header__pagination"></div>
+    </div>
+
+    </div>
+
 </header>

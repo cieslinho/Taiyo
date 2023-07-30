@@ -1,19 +1,124 @@
 .header {
 	position: relative;
+	margin-top: 135px;
 	width: 100%;
-	height: 75vh;
-}
+	height: 80vh;
 
-.slider {
-	width: 100%;
-	height: 100%;
+	&__swiper {
+		height: 100% !important;
+	}
 
-	&__slides {
+	&__texts {
+		display: flex;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		flex-direction: column;
+		align-items: center;
+		transform: translate(-50%, -50%);
+		z-index: 15;
+
+		text-align: center;
+	}
+
+	&__title {
+		display: block;
+		margin-bottom: 0.1em;
+		width: 100%;
+		color: $white;
+		font-size: 3rem;
+		font-family: 'Dancing Script', cursive;
+
+		@include respond(mobile) {
+			white-space: nowrap;
+		}
+
+		@include respond(tablet) {
+			font-size: 4rem;
+		}
+
+		@include respond(desktop-small) {
+			font-size: 5.3rem;
+		}
+
+		@include respond(desktop-large) {
+			font-size: 7rem;
+		}
+	}
+
+	&__subtitle {
+		font-size: 2.5rem;
+
+		@include respond(tablet) {
+			font-size: 3.5rem;
+		}
+
+		@include respond(desktop-small) {
+			font-size: 5rem;
+		}
+	}
+
+	&__link {
+		transition: background-color 0.3s, color 0.3s;
+		margin-block: 1em;
+		border: 2px solid $orange;
+		background-color: $black;
+		padding: 1em 4em;
+		color: $orange;
+		font-weight: 700;
+
+		text-transform: uppercase;
+
+		&:hover {
+			background-color: $orange;
+			color: $black;
+		}
+
+		@include respond(desktop-small) {
+			font-size: 1.8rem;
+		}
+	}
+
+	&__boxes {
+		&::after {
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 15;
+			background-color: rgba($color: $black, $alpha: 0.5);
+			width: 100%;
+			height: 100%;
+			content: '';
+		}
 	}
 
 	&__slide {
-		width: 100%;
-		height: 100%;
-		object-fit: cover !important;
+		width: 100% !important;
+		height: 100% !important;
+		object-fit: cover;
+
+		&-mobile {
+			@include respond(desktop-small) {
+				display: none;
+			}
+		}
+
+		&-desktop {
+			display: none;
+
+			@include respond(desktop-small) {
+				display: block;
+			}
+		}
+	}
+
+	&__pagination {
+		.swiper-pagination-bullet {
+			border-radius: 0;
+			background-color: rgba($color: $orange, $alpha: 1);
+		}
+		.swiper-pagination-bullet-active {
+			background-color: rgba($color: $orange, $alpha: 1);
+		}
 	}
 }
