@@ -10,9 +10,10 @@
                 <h2 class="about__subtitle">Gabinet masażu erotycznego we Wrocławiu</h2>
                 <h2 class="about__title">o nas</h2>
                 <div class="about__texts">
-                    <p class="about__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde quos consequatur dignissimos repudiandae accusamus voluptates laudantium explicabo exercitationem! Explicabo, saepe.</p>
-                    <p class="about__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde quos consequatur dignissimos repudiandae accusamus voluptates laudantium explicabo exercitationem! Explicabo, saepe.</p>
-                    <p class="about__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde quos consequatur dignissimos repudiandae accusamus voluptates laudantium explicabo exercitationem! Explicabo, saepe.</p>
+                <?php foreach( $attributes['texts'] as $text ): ?>
+                    <p class="about__text"> <?php echo $text['text']; ?></p>
+            
+                    <?php endforeach; ?>
                 </div>
             </div>
         </div>

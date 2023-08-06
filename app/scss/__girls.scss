@@ -1,4 +1,6 @@
 .girls {
+	background-color: $light-black;
+
 	@include section-padding-block;
 
 	&__boxes {
@@ -40,6 +42,25 @@
 			height: 100%;
 			content: '';
 		}
+
+		&-texts {
+			// display: none;
+			// display: none;
+			// visibility: hidden;
+			// opacity: 0;
+			transition: all 0.3s;
+			border-bottom: 2px solid $orange;
+			background-color: rgba($color: $black, $alpha: 0.5);
+			padding: 0.5em;
+			max-height: 150px;
+		}
+
+		// &-texts.active {
+		// 	display: block;
+		// 	visibility: visible;
+		// 	opacity: 1;
+		// 	height: auto;
+		// }
 
 		&-img {
 			position: absolute;
@@ -105,11 +126,13 @@
 
 		&-link {
 			transition: background-color 0.3s, color 0.3s, border 0.3s;
+			cursor: pointer;
 			border: 2px solid transparent;
 			background-color: $orange-red;
 			padding: 0.2em;
 			color: $black;
 			font-weight: 700;
+			font-family: 'Roboto Slab', serif;
 			letter-spacing: 1px;
 			text-transform: uppercase;
 

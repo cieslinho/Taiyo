@@ -27,7 +27,8 @@
   transition: filter 0.3s ease-in-out;
 }
 
-.main.active {
+.main.active,
+.footer.active {
   filter: blur(5px);
 }
 
@@ -37,9 +38,15 @@
   left: 0;
   z-index: 999999;
   backdrop-filter: blur(5px);
-  background-color: #191919;
+  background-color: #141414;
   padding-inline: 1em;
   width: 100%;
+}
+@media only screen and (min-width: 768px) {
+  .nav {
+    box-shadow: 0px 5px 72px 17px #000;
+    border-bottom: 2px solid #ff8c00;
+  }
 }
 .nav__logo-img {
   padding: 0.8em;
@@ -93,7 +100,7 @@
   }
 }
 .nav__btn:hover {
-  background-color: #191919;
+  background-color: #141414;
 }
 .nav__btn:hover .nav__btn-bars {
   background-color: #ffa500;
@@ -155,7 +162,7 @@
   transform: translateX(100%);
   transition: backdrop-filter 0.3s ease-in-out, transform 0.5s ease-in-out;
   border-left: 2px solid #ff8c00;
-  background-color: rgba(25, 25, 25, 0.9);
+  background-color: rgba(20, 20, 20, 0.9);
   width: 80vw;
   height: 100vh;
 }
@@ -272,7 +279,7 @@
   transition: background-color 0.3s, color 0.3s;
   margin-block: 1em;
   border: 2px solid #ffa500;
-  background-color: #191919;
+  background-color: #141414;
   padding: 1em 4em;
   color: #ffa500;
   font-weight: 700;
@@ -280,7 +287,7 @@
 }
 .header__link:hover {
   background-color: #ffa500;
-  color: #191919;
+  color: #141414;
 }
 @media only screen and (min-width: 1024px) {
   .header__link {
@@ -292,7 +299,7 @@
   top: 0;
   left: 0;
   z-index: 15;
-  background-color: rgba(25, 25, 25, 0.5);
+  background-color: rgba(20, 20, 20, 0.5);
   width: 100%;
   height: 100%;
   content: "";
@@ -324,6 +331,7 @@
 }
 
 .about {
+  background-color: #191919;
   padding: 2em 1em;
 }
 @media only screen and (min-width: 768px) {
@@ -447,7 +455,7 @@
   top: 0;
   left: 0;
   transition: 0.3s ease-in-out;
-  background-color: rgba(25, 25, 25, 0.5);
+  background-color: rgba(20, 20, 20, 0.5);
   width: 100%;
   height: 100%;
   content: "";
@@ -456,7 +464,7 @@
   transform: scale(1.1) rotate(1deg);
 }
 .pricing__card:hover::after {
-  background-color: rgba(25, 25, 25, 0.3);
+  background-color: rgba(20, 20, 20, 0.3);
 }
 .pricing__card:nth-child(2) {
   border-block: 2px solid #ffa500;
@@ -498,7 +506,7 @@
 .pricing__card-subtitle {
   background-color: #ff8c00;
   padding: 0.2em;
-  color: #191919;
+  color: #141414;
   font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -616,14 +624,14 @@
     justify-content: center;
     align-items: center;
     transition: 0.2s;
-    background: rgba(25, 25, 25, 0.5);
+    background: rgba(20, 20, 20, 0.5);
     padding: 1.5em;
     width: 30px;
     height: 30px;
   }
   .gallery .swiper-button-next:hover,
   .gallery .swiper-button-prev:hover {
-    background-color: #191919;
+    background-color: #141414;
   }
   .gallery .swiper-button-next::after,
   .gallery .swiper-button-prev::after {
@@ -632,6 +640,7 @@
 }
 
 .girls {
+  background-color: #191919;
   padding-block: 1em;
 }
 @media only screen and (min-width: 768px) {
@@ -658,17 +667,24 @@
   transform: scale(1.05);
 }
 .girls__box:hover::after {
-  background-color: rgba(25, 25, 25, 0.3);
+  background-color: rgba(20, 20, 20, 0.3);
 }
 .girls__box::after {
   position: absolute;
   top: 0;
   left: 0;
   transition: background-color 0.3s;
-  background-color: rgba(25, 25, 25, 0.5);
+  background-color: rgba(20, 20, 20, 0.5);
   width: 100%;
   height: 100%;
   content: "";
+}
+.girls__box-texts {
+  transition: all 0.3s;
+  border-bottom: 2px solid #ffa500;
+  background-color: rgba(20, 20, 20, 0.5);
+  padding: 0.5em;
+  max-height: 150px;
 }
 .girls__box-img {
   position: absolute;
@@ -730,17 +746,19 @@
 }
 .girls__box-link {
   transition: background-color 0.3s, color 0.3s, border 0.3s;
+  cursor: pointer;
   border: 2px solid transparent;
   background-color: #ff8c00;
   padding: 0.2em;
-  color: #191919;
+  color: #141414;
   font-weight: 700;
+  font-family: "Roboto Slab", serif;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
 .girls__box-link:hover {
   border: 2px solid #ffa500;
-  background-color: #191919;
+  background-color: #141414;
   color: #ffa500;
 }
 @media only screen and (min-width: 768px) {
@@ -755,14 +773,14 @@
   border: 2px solid transparent;
   background-color: #ff8c00;
   padding: 0.2em;
-  color: #191919;
+  color: #141414;
   font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
 .girls__box-mobile:hover {
   border: 2px solid #ffa500;
-  background-color: #191919;
+  background-color: #141414;
   color: #ffa500;
 }
 @media only screen and (min-width: 768px) {
@@ -770,6 +788,96 @@
     padding: 0.5em;
     font-size: 2rem;
   }
+}
+
+.footer {
+  background-color: #191919;
+  padding-block: 1em;
+  padding-bottom: 0 !important;
+}
+@media only screen and (min-width: 768px) {
+  .footer {
+    padding-block: 3em;
+  }
+}
+.footer__boxes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  margin-bottom: 2em;
+}
+.footer__box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5em;
+}
+.footer__box-text {
+  color: #fff;
+  font-size: 1.8rem;
+  text-align: center;
+}
+.footer__box-link {
+  border-bottom: 1px solid #fff;
+}
+.footer__box-link:hover {
+  border-bottom: 1px solid #ffa500;
+}
+.footer__box-title {
+  font-size: 3rem;
+  font-family: "Dancing Script", cursive;
+}
+@media only screen and (min-width: 768px) {
+  .footer__box-title {
+    font-size: 5rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .footer__box-title {
+    font-size: 6rem;
+  }
+}
+.footer__links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+}
+.footer__bottom {
+  background-color: #ffa500;
+  padding: 0.5em;
+}
+.footer__bottom-text {
+  color: #141414;
+  text-align: center;
+}
+.footer__bottom-link {
+  display: inline-block;
+  position: relative;
+  z-index: 15;
+  transition: color 0.3s;
+  padding: 0.15em;
+  color: #141414;
+}
+.footer__bottom-link::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -10;
+  transition: height 0.3s;
+  background-color: #141414;
+  width: 100%;
+  height: 1px;
+  content: "";
+}
+.footer__bottom-link:hover {
+  color: #fff;
+}
+.footer__bottom-link:hover::after {
+  height: 100%;
 }
 
 *,
@@ -790,7 +898,7 @@
 
 ::selection {
   background-color: #ff8c00;
-  color: #191919;
+  color: #141414;
 }
 
 html {
@@ -799,7 +907,7 @@ html {
 }
 
 body {
-  background-color: #191919;
+  background-color: #141414;
   font-size: 1.6rem;
   font-family: "Roboto Slab", serif;
 }

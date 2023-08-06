@@ -6,18 +6,14 @@
             <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
                 class="swiper mySwiper2 main-gallery ">
                 <div class="swiper-wrapper gallery__main">
+                <?php forEach( $attributes['gallery'] as $gallery) : ?>
                     <div class="swiper-slide gallery__main-slide">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/girls/Natalia2.jpg"
+                        <img src="<?php echo esc_url( $gallery['gallery-slide']['url'] ); ?>"
+                alt="<?php echo esc_attr( $gallery['gallery-slide']['alt'] ); ?>"
                             class="gallery__main-img" />
                     </div>
-                    <div class="swiper-slide gallery__main-slide">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/girls/Natalia3.jpg"
-                            class="gallery__main-img" />
-                    </div>
-                    <div class="swiper-slide gallery__main-slide">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/girls/Natalia4.jpg"
-                            class="gallery__main-img" />
-                    </div>
+                    <?php endforeach; ?>
+                    
 
                 </div>
                 <div class="swiper-button-next"></div>
@@ -27,18 +23,14 @@
             </div>
             <div thumbsSlider="" class="swiper mySwiper thumbs-gallery ">
                 <div class="swiper-wrapper gallery__thumbs">
+                <?php forEach( $attributes['thumbnail'] as $thumbnail) : ?>
                     <div class="swiper-slide gallery__thumbs-slide">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/girls/Natalia2.jpg"
+                        <img src="<?php echo esc_url( $thumbnail['thumbnail-slide']['url'] ); ?>"
+                alt="<?php echo esc_attr( $thumbnail['thumbnail-slide']['alt'] ); ?>"
                             class="gallery__thumbs-img" />
                     </div>
-                    <div class="swiper-slide gallery__thumbs-slide">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/girls/Natalia3.jpg"
-                            class="gallery__thumbs-img" />
-                    </div>
-                    <div class="swiper-slide gallery__thumbs-slide">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/girls/Natalia4.jpg"
-                            class="gallery__thumbs-img" />
-                    </div>
+                    <?php endforeach; ?>
+                    
 
                 </div>
             </div>
