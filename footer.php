@@ -15,15 +15,15 @@
             <div class="footer__box">
               <div class="footer__links">
                 <a href="mailto:kontakt@taiyo.pl" class="footer__box-text footer__box-link"><i class='bx bxs-envelope'></i> kontakt@taiyo.pl</a>
-                <a href="telto:+48537895760" class="footer__box-text footer__box-link"><i class='bx bxs-phone'></i> +48 537 895 760</a>
+                <a href="tel:+48000000000" class="footer__box-text footer__box-link"><i class='bx bxs-phone'></i> +48 000 000 000</a>
               </div>
             </div>
         </div>
     </div>
-        <iframe src="https://my.atlist.com/map/ba01be8a-9abc-46c3-98b3-a564d32b7c9d?share=true" allow="geolocation 'self' https://my.atlist.com" width="100%" height="400px" frameborder="0" scrolling="no" allowfullscreen></iframe>
+    <iframe src="https://snazzymaps.com/embed/517199" width="100%" height="400px" style="border:none;"></iframe>
         <div class="footer__bottom">
             <div class="container">
-                <p class="footer__bottom-text">Copyright © TAIYO All rights reserved | Realizacja: <a class="footer__bottom-link" href="https://www.cieslaszymon.pl/">Cieśla Szymon</a></p>
+                <p class="footer__bottom-text">Copyright © TAIYO All rights reserved | Realizacja: <a class="footer__bottom-link" href="mailto:contact@cieslaszymon.pl">Cieśla Szymon</a></p>
             </div>
         </div>
     

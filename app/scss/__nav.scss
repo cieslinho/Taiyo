@@ -4,7 +4,7 @@
 
 .main.active,
 .footer.active {
-	filter: blur(5px);
+	filter: blur(3px);
 }
 
 .nav {
@@ -12,7 +12,7 @@
 	top: 0;
 	left: 0;
 	z-index: 999999;
-	backdrop-filter: blur(5px);
+	backdrop-filter: blur(3px);
 	background-color: $black;
 	padding-inline: 1em;
 	width: 100%;
@@ -215,6 +215,6 @@
 	&__menu.active {
 		// display: flex;
 		transform: translateX(0);
-		backdrop-filter: blur(2px);
+		// backdrop-filter: blur(2px);
 	}
 }

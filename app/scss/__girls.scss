@@ -1,15 +1,16 @@
 .girls {
+	position: relative;
 	background-color: $light-black;
-
 	@include section-padding-block;
 
 	&__boxes {
 		display: flex;
+		position: relative;
 		flex-direction: column;
 
 		@include respond(tablet) {
 			display: grid;
-			grid-template-columns: repeat(2, 1fr);
+			grid-template-columns: repeat(3, 1fr);
 		}
 	}
 
@@ -26,10 +27,6 @@
 			&::after {
 				background-color: rgba($color: $black, $alpha: 0.3);
 			}
-
-			// .girls__box-bottom {
-			// 	background-color: rgba($color: $black, $alpha: 0.8);
-			// }
 		}
 
 		&::after {
@@ -44,23 +41,12 @@
 		}
 
 		&-texts {
-			// display: none;
-			// display: none;
-			// visibility: hidden;
-			// opacity: 0;
 			transition: all 0.3s;
 			border-bottom: 2px solid $orange;
 			background-color: rgba($color: $black, $alpha: 0.5);
 			padding: 0.5em;
 			max-height: 150px;
 		}
-
-		// &-texts.active {
-		// 	display: block;
-		// 	visibility: visible;
-		// 	opacity: 1;
-		// 	height: auto;
-		// }
 
 		&-img {
 			position: absolute;
@@ -83,6 +69,7 @@
 			transition: background-color 0.3s;
 			// background-color: rgba($color: $black, $alpha: 0.3);
 			padding: 1em;
+			width: 100%;
 			color: $white;
 		}
 
@@ -170,5 +157,95 @@
 				font-size: 2rem;
 			}
 		}
+	}
+
+	&__modal {
+		display: flex;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		justify-content: center;
+		align-items: flex-start;
+		transform: translate(-50%, -50%);
+		visibility: hidden;
+		opacity: 0;
+		z-index: 200;
+		transition: opacity 0.3s ease-in-out;
+		box-shadow: 0 0 10px $black;
+		border: 2px solid $orange;
+		background-color: $black;
+		padding: 1em;
+		width: 95%;
+
+		@include respond(tablet) {
+			max-width: 1200px;
+		}
+
+		&-content {
+			display: flex;
+			position: relative;
+			flex-direction: column;
+			gap: 1em;
+			padding: 1em 2em;
+			width: 100%;
+			color: $white;
+			// overflow-y: scroll;
+		}
+
+		&-title {
+			font-size: 2rem;
+			text-transform: uppercase;
+		}
+
+		&-text {
+			line-height: 150%;
+		}
+	}
+
+	&__modal.active {
+		// display: flex;
+		visibility: visible;
+		opacity: 1;
+	}
+
+	&__close {
+		transition: background-color 0.2s;
+		cursor: pointer;
+		border: 1px solid $orange;
+		background: none;
+		background-color: $orange;
+		padding: 0.5em;
+
+		&:hover {
+			background-color: $black;
+
+			i {
+				color: $orange;
+			}
+		}
+
+		i {
+			transition: color 0.2s;
+			color: $black;
+			font-size: 2rem;
+		}
+	}
+
+	&__overlay {
+		position: relative;
+		opacity: 0;
+	}
+
+	&__overlay.active {
+		position: fixed;
+		top: 0;
+		left: 0;
+		opacity: 1;
+		z-index: 200;
+		transition: opacity 0.3s ease-in-out;
+		background-color: rgba($color: $black, $alpha: 0.5);
+		width: 100vw;
+		height: 100vh;
+		content: '';
 	}
 }

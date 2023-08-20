@@ -1,4 +1,5 @@
-<section id="girls" class="girls">
+<section id="girls" class="girls">   
+
     <div class="container">
         <h2 class="section-title">
             Masażystki
@@ -26,5 +27,18 @@
 
             
         </div>
+        <div class="girls__overlay"></div>
+        <?php foreach( $attributes['modal-box'] as $modal): ?>
+        <div id="<?php echo $modal['modal-id']; ?>" class="girls__modal">
+            <div class="girls__modal-content">
+                <p class="girls__modal-title"><?php echo $modal['modal-name']; ?></p>
+                <p class="girls__modal-text"><?php echo $modal['modal-description']; ?></p>    
+            </div>
+            <button class="girls__close">
+                    <i class='bx bx-x'></i>
+            </button>
+        </div>
+        <?php endforeach; ?>
+        
     
 </section>

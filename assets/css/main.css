@@ -29,7 +29,7 @@
 
 .main.active,
 .footer.active {
-  filter: blur(5px);
+  filter: blur(3px);
 }
 
 .nav {
@@ -37,7 +37,7 @@
   top: 0;
   left: 0;
   z-index: 999999;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(3px);
   background-color: #141414;
   padding-inline: 1em;
   width: 100%;
@@ -211,7 +211,6 @@
 }
 .nav__menu.active {
   transform: translateX(0);
-  backdrop-filter: blur(2px);
 }
 
 .header {
@@ -640,6 +639,7 @@
 }
 
 .girls {
+  position: relative;
   background-color: #191919;
   padding-block: 1em;
 }
@@ -650,12 +650,13 @@
 }
 .girls__boxes {
   display: flex;
+  position: relative;
   flex-direction: column;
 }
 @media only screen and (min-width: 768px) {
   .girls__boxes {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 .girls__box {
@@ -705,6 +706,7 @@
   z-index: 20;
   transition: background-color 0.3s;
   padding: 1em;
+  width: 100%;
   color: #fff;
 }
 .girls__box-top {
@@ -788,6 +790,84 @@
     padding: 0.5em;
     font-size: 2rem;
   }
+}
+.girls__modal {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  justify-content: center;
+  align-items: flex-start;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+  opacity: 0;
+  z-index: 200;
+  transition: opacity 0.3s ease-in-out;
+  box-shadow: 0 0 10px #141414;
+  border: 2px solid #ffa500;
+  background-color: #141414;
+  padding: 1em;
+  width: 95%;
+}
+@media only screen and (min-width: 768px) {
+  .girls__modal {
+    max-width: 1200px;
+  }
+}
+.girls__modal-content {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  gap: 1em;
+  padding: 1em 2em;
+  width: 100%;
+  color: #fff;
+}
+.girls__modal-title {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+.girls__modal-text {
+  line-height: 150%;
+}
+.girls__modal.active {
+  visibility: visible;
+  opacity: 1;
+}
+.girls__close {
+  transition: background-color 0.2s;
+  cursor: pointer;
+  border: 1px solid #ffa500;
+  background: none;
+  background-color: #ffa500;
+  padding: 0.5em;
+}
+.girls__close:hover {
+  background-color: #141414;
+}
+.girls__close:hover i {
+  color: #ffa500;
+}
+.girls__close i {
+  transition: color 0.2s;
+  color: #141414;
+  font-size: 2rem;
+}
+.girls__overlay {
+  position: relative;
+  opacity: 0;
+}
+.girls__overlay.active {
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  z-index: 200;
+  transition: opacity 0.3s ease-in-out;
+  background-color: rgba(20, 20, 20, 0.5);
+  width: 100vw;
+  height: 100vh;
+  content: "";
 }
 
 .footer {
@@ -903,6 +983,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 137px;
   font-size: 62.5%;
 }
 

@@ -7,7 +7,7 @@
 
             </div>
             <div class="about__box about__box-info">
-                <h2 class="about__subtitle">Gabinet masażu erotycznego we Wrocławiu</h2>
+                <h2 class="about__subtitle">Gabinet masażu we Wrocławiu</h2>
                 <h2 class="about__title">o nas</h2>
                 <div class="about__texts">
                 <?php foreach( $attributes['texts'] as $text ): ?>
