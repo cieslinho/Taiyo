@@ -4,7 +4,7 @@
     <div class="swiper mySwiper header__swiper">
    
            <div class="header__texts">
-                 <h2 class="header__title">Salon Masażu Erotycznego</h2>
+                 <h2 class="header__title">Salon Masażu</h2>
                  <h2 class="header__title header__subtitle">Wrocław</h2>
                  <a href="#pricing" class="header__link">Oferta</a>
                 </div>

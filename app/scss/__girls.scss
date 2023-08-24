@@ -159,6 +159,21 @@
 		}
 	}
 
+	#girl-1 {
+		top: 19%;
+
+		@include respond(tablet) {
+			top: 50%;
+		}
+	}
+	#girl-3 {
+		top: 80%;
+
+		@include respond(tablet) {
+			top: 50%;
+		}
+	}
+
 	&__modal {
 		display: flex;
 		position: absolute;
@@ -177,8 +192,13 @@
 		padding: 1em;
 		width: 95%;
 
+		max-height: 350px;
+		overflow-y: scroll;
+
 		@include respond(tablet) {
 			max-width: 1200px;
+			max-height: inherit;
+			overflow-y: inherit;
 		}
 
 		&-content {

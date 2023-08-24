@@ -7,7 +7,7 @@
         </div>
         <div class="girls__boxes">
         <?php foreach( $attributes['girl-box'] as $girl): ?>
-            <div class="girls__box">
+            <div id="<?php echo $girl['box-id']; ?>" class="girls__box">
                 <img src="<?php echo esc_url( $girl['image']['url'] ); ?>"
                 alt="<?php echo esc_attr( $girl['image']['alt'] ); ?>" class="girls__box-img">
                 <div class="girls__box-top">

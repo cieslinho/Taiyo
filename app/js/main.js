@@ -7,13 +7,13 @@ const footerContent = document.querySelector('.footer')
 
 const modalOverlay = document.querySelector('.girls__overlay')
 
-const modalOne = document.getElementById('1-girl')
-const modalTwo = document.getElementById('2-girl')
-const modalThree = document.getElementById('3-girl')
+const modalOne = document.getElementById('girl-1')
+const modalTwo = document.getElementById('girl-2')
+const modalThree = document.getElementById('girl-3')
 
-const modalBtnOne = document.getElementById('1-btn')
-const modalBtnTwo = document.getElementById('2-btn')
-const modalBtnThree = document.getElementById('3-btn')
+const modalBtnOne = document.getElementById('btn-1')
+const modalBtnTwo = document.getElementById('btn-2')
+const modalBtnThree = document.getElementById('btn-3')
 
 const handleNav = () => {
 	navBtn.classList.toggle('active')
