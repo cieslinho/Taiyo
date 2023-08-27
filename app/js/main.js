@@ -58,6 +58,13 @@ const handleModal = () => {
 			modalOverlay.classList.remove('active')
 		})
 	})
+
+	modalOverlay.addEventListener('click', () => {
+		modalOne.classList.remove('active')
+		modalTwo.classList.remove('active')
+		modalThree.classList.remove('active')
+		modalOverlay.classList.remove('active')
+	})
 }
 
 navBtn.addEventListener('click', handleNav)
