@@ -15,7 +15,7 @@
             <div class="footer__box">
               <div class="footer__links">
                 <a href="mailto:kontakt@taiyo.pl" class="footer__box-text footer__box-link"><i class='bx bxs-envelope'></i> kontakt@taiyo.pl</a>
-                <a href="tel:+48000000000" class="footer__box-text footer__box-link"><i class='bx bxs-phone'></i> +48 000 000 000</a>
+                <a href="tel:+48577576051" class="footer__box-text footer__box-link"><i class='bx bxs-phone'></i> +48 577 576 051</a>
               </div>
             </div>
         </div>

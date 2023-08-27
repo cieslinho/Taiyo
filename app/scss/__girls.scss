@@ -8,7 +8,7 @@
 		position: relative;
 		flex-direction: column;
 
-		@include respond(tablet) {
+		@include respond(desktop-small) {
 			display: grid;
 			grid-template-columns: repeat(3, 1fr);
 		}
@@ -56,6 +56,18 @@
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
+
+			@include respond(tablet) {
+				display: none;
+			}
+		}
+
+		&-desktopimg {
+			display: none;
+
+			@include respond(tablet) {
+				display: inherit;
+			}
 		}
 
 		&-bottom {
@@ -155,6 +167,18 @@
 			@include respond(tablet) {
 				padding: 0.5em;
 				font-size: 2rem;
+			}
+
+			@include respond(tablet) {
+				display: none;
+			}
+		}
+
+		&-desktop {
+			display: none;
+
+			@include respond(tablet) {
+				display: inherit;
 			}
 		}
 	}

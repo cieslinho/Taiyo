@@ -8,8 +8,10 @@
         <div class="girls__boxes">
         <?php foreach( $attributes['girl-box'] as $girl): ?>
             <div id="<?php echo $girl['box-id']; ?>" class="girls__box">
-                <img src="<?php echo esc_url( $girl['image']['url'] ); ?>"
-                alt="<?php echo esc_attr( $girl['image']['alt'] ); ?>" class="girls__box-img">
+                <img src="<?php echo esc_url( $girl['image-mobile']['url'] ); ?>"
+                alt="<?php echo esc_attr( $girl['image-mobile']['alt'] ); ?>" class="girls__box-img">
+                <img src="<?php echo esc_url( $girl['image-desktop']['url'] ); ?>"
+                alt="<?php echo esc_attr( $girl['image-desktop']['alt'] ); ?>" class="girls__box-img girls__box-desktopimg">
                 <div class="girls__box-top">
                 <button id="<?php echo $girl['more-id']; ?>" class="girls__box-link">więcej...</button>
                 </div>
@@ -20,6 +22,7 @@
                     <p  class="girls__box-text"> <?php echo $girl['about']; ?></p>
                     </div>
                     <a href="<?php echo esc_url( $girl['mobile'] ); ?>" class="girls__box-mobile">umów wizytę</a>
+                    <a href="<?php echo esc_url( $girl['desktop'] ); ?>" class="girls__box-mobile girls__box-desktop">umów wizytę</a>
                 </div>
             </div>
             <?php endforeach; ?>
