@@ -11,6 +11,9 @@
                         <img src="<?php echo esc_url( $gallery['gallery-slide']['url'] ); ?>"
                 alt="<?php echo esc_attr( $gallery['gallery-slide']['alt'] ); ?>"
                             class="gallery__main-img" />
+                        <img src="<?php echo esc_url( $gallery['gallery-mobile']['url'] ); ?>"
+                alt="<?php echo esc_attr( $gallery['gallery-mobile']['alt'] ); ?>"
+                            class="gallery__main-img gallery__main-mobile" />
                     </div>
                     <?php endforeach; ?>
                     

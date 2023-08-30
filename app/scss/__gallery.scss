@@ -42,9 +42,25 @@
 
 		&-img {
 			// border: 2px solid $orange;
+			display: none;
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
+
+			@include respond(tablet) {
+				display: inherit;
+			}
+		}
+
+		&-mobile {
+			display: inherit;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+
+			@include respond(tablet) {
+				display: none;
+			}
 		}
 	}
 
